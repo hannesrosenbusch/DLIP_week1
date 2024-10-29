@@ -1,13 +1,12 @@
 import numpy as np
-from tasks import compute_dimensions
+from tasks import step
 
-# Test for Task 1: compute_dimensions
-def test_compute_dimensions():
-    matrix = np.array([[1, 2], [3, 4]])
-    assert compute_dimensions(matrix) == (2, 2)
-    
-    matrix = np.array([[1, 2, 3], [4, 5, 6]])
-    assert compute_dimensions(matrix) == (2, 3)
-    
-    matrix = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
-    assert compute_dimensions(matrix) == (3, 4)
+# Test cases for Task 1: step function
+def test_step_positive():
+    assert step(5) == 1, "Failed on positive input"
+
+def test_step_negative():
+    assert step(-3) == -1, "Failed on negative input"
+
+def test_step_zero():
+    assert step(0) == -1, "Failed on zero input"
