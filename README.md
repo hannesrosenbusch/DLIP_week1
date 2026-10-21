@@ -9,16 +9,21 @@ An introduction to Python can be seen here: <br>
 
 # Steps for Completing the Assignment
 
-## Step 1
-Make a github account if you don't have one already.
+## Step 1: Create your own repo
+On this repository's GitHub page, click **Use this template** and create a repository in your own account (you can rename it if convenient; it should be a PUBLIC repo).
 
-## Step 2:
-Clone this github repository onto your laptop via a terminal, or use google colab, or kaggle...anywhere where you can edit python code. If your laptop doesn't work well, work on https://replit.com/.
-There are plenty of online resources which demo how to clone a repo e.g. here: https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands. 
-(Notice that you need to install python if you decide to work on your laptop)
+Work in your own copy, there is no need to ever return to the course repo. You will clone, commit, and push to the repo in your own account.
 
-## Step 3: 
-Edit the tasks.py file by filling in your solution code.
+## Step 2: Enable GitHub Actions
+Open your new repository's **Actions** tab. If GitHub asks whether to enable workflows, confirm.
+
+If workflows are disabled in repository settings, allow GitHub-provided actions (including `actions/checkout` and `actions/setup-python`), or select **Allow all actions and reusable workflows**. Save the setting. Then return to **Actions** and enable the workflow if prompted.
+
+## Step 3: Get a working copy onto your computer
+Clone your new repository using its GitHub page's **Code** button, or edit it in an online environment such as Google Colab or Kaggle. Replit is another option if your computer does not work well. If you work locally, install Python first. See this guide for basic Git commands: https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/.
+
+## Step 4: Complete and test the assignment
+Edit (only!) the tasks.py file by filling in your solution code.
 Use the functions, and print the returned outputs, to see whether you have errors.
 You can also run all grading tests locally with these commands:
  ```bash
@@ -27,12 +32,16 @@ You can also run all grading tests locally with these commands:
  ```
 The grading files are in the `tests/` folder; don't edit them.
 GitHub Actions runs all three grading files automatically on pushes and pull requests.
-The Actions run summary reports the outcome of each task, and the workflow fails if
-any grading file fails.
+The Actions run summary reports the outcome of each task.
 
-## Step 4: 
-Push your changes to the repo back to github. The grading will occur automatically but might take a minute.
-Again, the add/commit/push workflow of github is explained in various places online: https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands)
+## Step 5: Push your work and check your grade
+Commit and push your changes to your own repository. For a local clone, run:
+ ```bash
+ git add tasks.py
+ git commit -m "Complete week 1 tasks"
+ git push
+ ```
+After the push, go to your browser, open your repository's **Actions** tab and select the newest **Grade assignment** run. Its **Summary** shows the result for each task; open the task steps to see test details. If no run appears, check that Actions are enabled and that you pushed to your own repository.
 
-## Step 5:
-Add this week's kaggle certificate(s) to the repository (course: https://www.kaggle.com/learn/python ; https://www.kaggle.com/learn/pandas). If you received more than one certificate for this week, combine them into one pdf before. Name the file `certificate.pdf` 
+## Step 6: Upload to canvas
+Follow the instructions on canvas (i.e., likely you will have to upload a link to this repo. Make sure the repo settings say it's public rather than private).
