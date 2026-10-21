@@ -20,12 +20,15 @@ There are plenty of online resources which demo how to clone a repo e.g. here: h
 ## Step 3: 
 Edit the tasks.py file by filling in your solution code.
 Use the functions, and print the returned outputs, to see whether you have errors.
-You can also preview our test cases by running this command in the terminal 
+You can also run all grading tests locally with these commands:
  ```bash
- pip install pytest
- pytest grade_task1.py
+ python -m pip install numpy pytest
+ python -m pytest tests/grade_task1.py tests/grade_task2.py tests/grade_task3.py
  ```
-Notice that you shouldn't edit the grading files as those file trigger commit alerts.
+The grading files are in the `tests/` folder; don't edit them.
+GitHub Actions runs all three grading files automatically on pushes and pull requests.
+The Actions run summary reports the outcome of each task, and the workflow fails if
+any grading file fails.
 
 ## Step 4: 
 Push your changes to the repo back to github. The grading will occur automatically but might take a minute.
